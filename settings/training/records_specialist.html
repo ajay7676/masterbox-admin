@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/custom-data-tables.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="../../assets/css/hr_menu.css">
+    <!-- Font  Faimly -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- FONTAWESOME ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Master box Admin</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light dk-navbar-main">
+        <div class="container-fluid">
+            <div class="dk-navbar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="dk-logo">
+                        <a href="#" class="navbar-brand router-link-exact-active active">
+                            <img src="../../assets/images/dk-logo.png" alt="DkJobs-Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="dk-nav-title">
+                        <span>Admin Panel - DK Masterbox</span>
+                    </div>
+                    <div class="dk-nav-profile">
+                        <div class="dropdown">
+                            <div class="dropdown-img" title="Deepak Kumar">
+                                <img src="../../assets/images/dpk-img.png" class="img-fluid img-circle" alt="">
+                            </div>
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                                <form id="logout-form" action="#" method="POST" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dk-wrapper">
+        <div class="d-flex-cols">
+            <div class="dk-push-wrapper">
+                <div class="content">
+                    <div class="dk-hrMian">
+                        <div class="dk-ds-navbar">        
+                            <div class="dk-ds-menu col-md-12">
+                                <div class="dk-ds-menu-cols">
+                                    <ul class="d-flex align-items-end dk-submenu-dropdown-toggle">
+                                        <li><a href="../../dashboard.html" class="">Dasboard</a></li>
+                                        <li class="dropdown"><a href="../../specs/job_specs.html" class="dropdown-toggle">Specs</a></li>
+                                        <li class="dropdown"><a href="../../resources/list.html" class="dropdown-toggle">Resources</a></li>
+                                        <li><a href="../../accounts/summary.html" class="dropdown-toggle">Accounts</a></li>
+                                        <li class="dropdown"><a href="../../clients.html" class="dropdown-toggle">Clients</a></li>
+                                        <li class="dropdown"><a href="../../services.html" class="dropdown-toggle">Services</a></li>
+                                        <li class="dropdown"><a href="../../payments/clients.html" class="dropdown-toggle">Payments</a></li>
+                                        <li class="dropdown"><a href="../../database/summary.html" class="dropdown-toggle">Database</a></li>
+                                        <li class="dropdown"><a href="../../reports.html" class="dropdown-toggle">Reports</a></li>
+                                        <li class="dropdown"><a href="../../tools/bk_values.html" class="dropdown-toggle">Tools</a></li>
+                                        <li class="dropdown"><a href="../../settings/users.html" class="dropdown-toggle grey-active">Settings</a></li>            
+                                    </ul>
+                                    <div class="dropdown-menu">
+                                        <div class="d-flex">
+                                            <li><a href="../../settings/users.html" class="">Users</a></li>
+                                            <li><a href="../../settings/billings.html" class="">Billings</a></li>
+                                            <li><a href="../../settings/training.html" class="sub-active">Training</a></li>
+                                            <li><a href="../../settings/faq.html" class="">FAQ</a></li>
+                                            <li><a href="../../settings/contracts.html" class="">Contracts</a></li>
+                                            <li><a href="../../settings/legal_docs.html" class="">Legal Docs</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Section Page Content-->
+    <div class="container-fluid dk-admin-Mncontainer" style="margin-top: 5rem;">
+        <div class="row">
+            <div class="col-md-3 dk-training-side-menu">
+                <nav class="navbar navbar-expand-lg navbar-vertical navbar-light  bg-light border-right border" id="dk-direct-training-sidebarNav">
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse align-content-stretch flex-wrap" id="navbarSupportedContent">
+                        <ul class="navbar-nav flex-column w-100">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="director_training.html">Management Training   
+                                    <span class="d-block ml-auto">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                                <a class="nav-link" href="account_manager_traing.html">Sales Department Training   
+                                    <span class="d-block ml-auto">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                                <a class="nav-link" href="advertisement_specialist_training.html" data-toggle="collapse" data-target="#nav-support-dep-training" aria-expanded="false" aria-controls="nav-support-dep-training" >
+                                    Support Department Training   
+                                    <span class="d-block ml-auto">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                                <div id="nav-support-dep-training" class="collapse show" data-parent="#dk-direct-training-sidebarNav">
+                                    <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="advertisement_specialist_training.html">Advertisement Specialist</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="resources_specialist_training.html">Resources Specialist</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="jobs_specialist_training.html">Jobs Specialist</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="records_specialist.html">Records Specialist
+                                            <span class="d-block ml-auto">
+                                                <i class="fa fa-angle-right" aria-hidden="true" style="font-size: 1rem;"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>             
+                 
+            </div>
+            <div class="col-md-9 dk-training-main-container">
+                <div class="page-header active_blogger page-header-light">
+                    <div class="page-header-content header-elements-md-inline">
+                        <div class="page-title d-flex justify-content-between">
+                            <div class="dk-flex-colstable d-flex align-items-center mb-1">
+                                <div class="col-md-12 d-flex pl-0">
+                                    <input id="srchterm" type="text" class="form-control" placeholder="Search by Text" style="max-width:170px;">
+                                </div>
+                            </div>
+                            <h3 class="dk-training-table-title">BACKEND - Records Specialist TRAINING</h3>
+                            <div class="dk-filter-btntable addNew">
+                                <button type="button" class="btn dk_trainng_add_btn mr-2" data-toggle="modal" data-target="#dk-director-training-reorder-icon">
+                                    <i class="fa fa-arrows-alt mr-2"></i> Reorder
+                                </button>
+                                <button type="button" class="btn dk_trainng_add_btn" data-toggle="modal" data-target="#dk-training-edit-add-popup"">
+                                    <i class="fa fa-plus mr-2"></i> Add Category
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dk-training-table-container">
+                    <table class="table display nowrap" style="width:100%" id="dk-mange-durector-table">
+                        <thead>
+                            <tr>
+                                <th>SNo.</th>
+                                <th>Topic Name</th>
+                                <th>Status</th>
+                                <th>Question</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Training - Director - Topic 1</td>
+                                <td>
+                                    <button data-toggle="tooltip" class="active_status">Active</button>
+                                </td>
+                                <td>
+                                    <a href="question_settings.html" class="question_btn">Add/Edit Questions</a>
+                                </td>
+                                <td>
+                                    <div class="btn-toolbar justify-content-center">
+                                        <div class="btn-group mr-2">
+                                                <button type="button" class="btn btn-primary dk-edit-button btn-sm mr-2" data-toggle="modal" data-target="#dk-training-edit-add-popup" title="Edit"><b><i class="fa fa-edit" aria-hidden="true"></i></b></button>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dk-training-delete-icon" title="Delete"><b><i class="fa fa-trash" aria-hidden="true"></i></b></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Training - Director - Topic 2</td>
+                                <td>
+                                    <button data-toggle="tooltip" class="inactive_status">Active</button>
+                                </td>
+                                <td>
+                                    <a href="question_settings.html" class="question_btn">Add/Edit Questions</a>
+                                </td>
+                                <td>
+                                    <div class="btn-toolbar justify-content-center">
+                                        <div class="btn-group mr-2">
+                                            <button type="button" class="btn btn-primary dk-edit-button btn-sm mr-2" data-toggle="modal" data-target="#dk-training-edit-add-popup" title="Edit"><b><i class="fa fa-edit" aria-hidden="true"></i></b></button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dk-training-delete-icon" title="Delete"><b><i class="fa fa-trash" aria-hidden="true"></i></b></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>        
+    <!-- End Section Page Content -->
+    <!-- Start Modal for Add Category or Edit Category button -->
+    <div class="modal fade" id="dk-training-edit-add-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content dk-logins-edit-credentail">
+            <div class="modal-header dk-logins-edit-header">
+              <h5 class="modal-title">Add/ Edit Topic</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label>Topic name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-primary dk-train-create-btn">Create</button>  
+              <button type="button" class="btn btn-secondary dk-train-close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Start Modal for Add Category or Edit Category button -->
+    <!-- Start Modal For Delete Icon -->
+    <div class="modal fade" id="dk-training-delete-icon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content dk-logins-edit-credentail">
+                <div class="modal-header dk-logins-edit-header">
+                <h5 class="modal-title">DELETE CATEGORY</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="dk-delete-title-cont text-center pt-3 pb-3">
+                        <h5 class="dk-body-title">Please confirm to continue.</h5>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="#" class="delete_record_btn">Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal For Delete Icon -->
+    <!-- Start Modal For Reorder Icon -->
+    <div class="modal fade" id="dk-director-training-reorder-icon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-reorder" role="document">
+        <div class="modal-content dk-logins-edit-credentail">
+            <div class="modal-header dk-logins-edit-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reorder</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <ul id="sortable" class="d-flex ui-sortable">
+                    <li class="ui-state-default" data-db-id="1" id="valueBox1" >
+                        <div class="d-flex">
+                            <div class="cols">
+                                <div><i class="fa fa-arrows-alt"></i></div>
+                                <div>Training - Director - Topic 1</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-state-default" data-db-id="2" id="valueBox2" >
+                        <div class="d-flex">
+                            <div class="cols">
+                                <div><i class="fa fa-arrows-alt"></i></div>
+                                <div>Training - Director - Topic 2</div>
+                            </div>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Modal For Reorder Icon -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.2.6/css/fixedColumns.dataTables.min.css">
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.6/js/dataTables.fixedColumns.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#dk-mange-durector-table').DataTable( {
+          "paging":   true,
+          // "pagingType": "full_numbers",
+          "ordering": false,
+          // "info":     false,
+          "scrollX": true  ,
+          "language": {
+                "zeroRecords": "No records available",
+                "info": "Showing _START_ to _END_ (of _TOTAL_ entries)",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 
+                'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
+            }    
+          } );
+        } );
+    </script>
+    <script>
+        $("#sortable").sortable({
+        
+        });
+    </script>
+    <style>
+        .dataTables_scrollHeadInner{
+                width: 1107.44px !important;
+
+        }
+    </style>
+  </body>
+</html>

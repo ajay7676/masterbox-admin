@@ -1,0 +1,187 @@
+.dk-ds-navbar .badge{
+    padding: .45em .7em;
+}
+.dk-ds-navbar .dk-ds-menu ul li:first-child a{
+    border-radius:5px 0 0 0;
+}
+.dk-ds-navbar .dk-ds-menu ul li:last-child a{
+    border-radius:0 5px 0 0;
+}
+.dk-ds-navbar .dk-ds-menu .dropdown-menu{
+    display: block;
+    width: 100%;
+    padding:0;
+    background: #d9d9d9;
+    border: none;
+    border-radius:0 0 5px 5px;
+    margin:0;
+}
+.dk-ds-navbar .dk-ds-menu ul li a.dropdown-toggle.grey-active {
+    background: #d9d9d9;
+    color: #333;
+    border-bottom: 1px solid #d9d9d9;
+}
+/* .dk-ds-navbar .dk-ds-menu .dropdown-menu li a:hover{
+    background:#fff;
+    color:#333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17);
+    transition:all 0.5s;
+} */
+.dk-ds-navbar .dk-ds-menu .dropdown-menu li{
+    width:100%;
+    max-width:210px;
+}
+.dk-ds-navbar .dk-ds-menu .dropdown-menu li a{
+    background: transparent;
+    color: #333;
+    border: none;
+    padding: 10px 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition:all 0.5s;
+    font-size: 14px;
+}
+.dk-ds-navbar .dk-ds-menu .dropdown-menu li a.sub-active{
+    background-color: #fff;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown.show a {
+    background: #d9d9d9;
+    color: #333;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown a.dropdown-toggle:after {
+    border-top: .4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: .4em solid transparent;
+    margin-top: 9px;
+    margin-left: 8px;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown ul.dropdown-menu .d-flex{
+    height:100%;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown ul.dropdown-menu li{
+    width:100%;
+    max-width:150px;
+    display:inline-block;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown ul.dropdown-menu li a{
+    background:#d9d9d9;
+    color: #000;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 400;
+    width:100%;
+    text-align:center;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown ul.dropdown-menu li a:hover{
+    background:#fff;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown ul.dropdown-menu {
+    width: 100%;
+    transform: inherit !important;
+    top:45px !important;
+    padding: 0;
+    border-radius:0;
+    border:none;
+    background:#d9d9d9;
+    margin:0;
+}
+.dk-ds-navbar .dk-ds-menu ul li a i {
+    margin-left: 8px;
+    font-size: 17px;
+}
+.dk-ds-navbar .dk-ds-menu ul li.dropdown{
+    position:initial;
+}
+.dk-hrMaincols{
+    padding:200px 0;   
+}
+.dk-ds-navbar {
+    display: flex;
+    background-color:transparent;
+    padding: 10px 0 0;
+    position: relative;
+    margin-top: 0;
+    z-index: 9;
+    max-width: 100%;
+}
+.dk-ds-navbar .dk-ds-profile {
+    position: relative;
+    top: 0;
+    width: 7%;
+}
+.dk-ds-navbar .dk-ds-profile .dk-ds-profile-img {
+    text-align: left;
+}
+.dk-ds-navbar .dk-ds-profile .dk-ds-profile-img img {
+    border-radius: 50%;
+    width:70px;
+    height:70px;
+    margin: 5px 0 8px;
+    object-fit: cover;
+}
+.dk-ds-navbar .dk-ds-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dk-ds-navbar .dk-ds-menu .dk-ds-menu-cols{
+    width: 100%;
+    position:relative;
+}
+.dk-ds-navbar .dk-ds-menu ul{
+    list-style: none;
+    /* height: 100%; */
+    position:relative;
+}
+.dk-ds-navbar .dk-ds-menu ul li{
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+.dk-ds-navbar .dk-ds-menu ul li a {
+    width: 100%;
+    background-color: #2e536f;
+    display: flex;
+    color: #fff;
+    font-weight:500;
+    font-size:14px;
+    padding:12px 10px;
+    border:1px solid #afafaf;
+    border-right: none;
+    justify-content: center;
+}
+.dk-ds-navbar .dk-ds-menu ul li:last-child a{
+    border-right:1px solid #afafaf;
+}
+.dk-hrMian{
+    background:#3e9eba;
+    padding:25px 5px 0;
+    width: 100%;
+}
+.dk-wrapper .dk-sidebar-nav{
+    display:none;
+}
+.dk-wrapper .d-flex-cols{
+    background:#fff;
+}
+.dk-wrapper .dk-push-wrapper{
+    background:#fff;
+    padding:0;
+    width: 100% !important;
+}
+.dk-push-wrapper>.content{
+    padding:0;
+}
+.dk-ds-navbar .dk-ds-menu .dk-ds-menu-cols ul li.dropdown a::after {
+    display: block !important;
+}
+.dk-submenu-dropdown-toggle .dropdown-toggle::after {
+    border-top: .4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: .4em solid transparent;
+    margin-top: 8px;
+    margin-left: 8px;
+}

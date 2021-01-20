@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="../assets/css/hr_menu.css">
+    <!-- Font  Faimly -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- FONTAWESOME ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Master box Admin</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light dk-navbar-main">
+        <div class="container-fluid">
+            <div class="dk-navbar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="dk-logo">
+                        <a href="#" class="navbar-brand router-link-exact-active active">
+                            <img src="../assets/images/dk-logo.png" alt="DkJobs-Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="dk-nav-title">
+                        <span>Admin Panel - DK Masterbox</span>
+                    </div>
+                    <div class="dk-nav-profile">
+                        <div class="dropdown">
+                            <div class="dropdown-img" title="Deepak Kumar">
+                                <img src="../assets/images/dpk-img.png" class="img-fluid img-circle" alt="">
+                            </div>
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                                <form id="logout-form" action="#" method="POST" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dk-wrapper">
+        <div class="d-flex-cols">
+            <div class="dk-push-wrapper">
+                <div class="content">
+                    <div class="dk-hrMian">
+                        <div class="dk-ds-navbar">        
+                            <div class="dk-ds-menu col-md-12">
+                                <div class="dk-ds-menu-cols">
+                                    <ul class="d-flex align-items-end dk-submenu-dropdown-toggle">
+                                        <li><a href="../dashboard.html" class="">Dasboard</a></li>
+                                        <li class="dropdown"><a href="../specs/job_specs.html" class="dropdown-toggle">Specs</a></li>
+                                        <li class="dropdown"><a href="../resources/list.html" class="dropdown-toggle">Resources</a></li>
+                                        <li><a href="../accounts/summary.html" class="dropdown-toggle">Accounts</a></li>
+                                        <li class="dropdown"><a href="../clients.html" class="dropdown-toggle">Clients</a></li>
+                                        <li class="dropdown"><a href="../services.html" class="dropdown-toggle">Services</a></li>
+                                        <li class="dropdown"><a href="../payments/clients.html" class="dropdown-toggle">Payments</a></li>
+                                        <li class="dropdown"><a href="../database/summary.html" class="dropdown-toggle">Database</a></li>
+                                        <li class="dropdown"><a href="../reports.html" class="dropdown-toggle">Reports</a></li>
+                                        <li class="dropdown"><a href="../tools/bk_values.html" class="dropdown-toggle">Tools</a></li>
+                                        <li class="dropdown"><a href="../settings/users.html" class="dropdown-toggle grey-active">Settings</a></li>            
+                                    </ul>
+                                    <div class="dropdown-menu">
+                                        <div class="d-flex">
+                                            <li><a href="../settings/users.html" class="">Users</a></li>
+                                            <li><a href="../settings/billings.html" class="sub-active">Billings</a></li>
+                                            <li><a href="../settings/training/director_training.html" class="">Training</a></li>
+                                            <li><a href="../settings/faq.html" class="">FAQ</a></li>
+                                            <li><a href="../settings/contracts.html" class="">Contracts</a></li>
+                                            <li><a href="../settings/legal_docs.html" class="">Legal Docs</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

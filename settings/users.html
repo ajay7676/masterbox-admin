@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="../assets/css/hr_menu.css">
+    <!-- Font  Faimly -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- FONTAWESOME ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Master box Admin</title>
+  </head>
+  <body>
+      <!-- Start Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light dk-navbar-main">
+        <div class="container-fluid">
+            <div class="dk-navbar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="dk-logo">
+                        <a href="#" class="navbar-brand router-link-exact-active active">
+                            <img src="../assets/images/dk-logo.png" alt="DkJobs-Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="dk-nav-title">
+                        <span>Admin Panel - DK Masterbox</span>
+                    </div>
+                    <div class="dk-nav-profile">
+                        <div class="dropdown">
+                            <div class="dropdown-img" title="Deepak Kumar">
+                                <img src="../assets/images/dpk-img.png" class="img-fluid img-circle" alt="">
+                            </div>
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                                <form id="logout-form" action="#" method="POST" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dk-wrapper">
+        <div class="d-flex-cols">
+            <div class="dk-push-wrapper">
+                <div class="content">
+                    <div class="dk-hrMian">
+                        <div class="dk-ds-navbar">        
+                            <div class="dk-ds-menu col-md-12">
+                                <div class="dk-ds-menu-cols">
+                                    <ul class="d-flex align-items-end dk-submenu-dropdown-toggle">
+                                        <li><a href="../dashboard.html" class="">Dasboard</a></li>
+                                        <li class="dropdown"><a href="../specs/job_specs.html" class="dropdown-toggle">Specs</a></li>
+                                        <li class="dropdown"><a href="../resources/list.html" class="dropdown-toggle">Resources</a></li>
+                                        <li><a href="../accounts/summary.html" class="dropdown-toggle">Accounts</a></li>
+                                        <li class="dropdown"><a href="../clients.html" class="dropdown-toggle">Clients</a></li>
+                                        <li class="dropdown"><a href="../services.html" class="dropdown-toggle">Services</a></li>
+                                        <li class="dropdown"><a href="../payments/clients.html" class="dropdown-toggle">Payments</a></li>
+                                        <li class="dropdown"><a href="../database/summary.html" class="dropdown-toggle">Database</a></li>
+                                        <li class="dropdown"><a href="../reports.html" class="dropdown-toggle">Reports</a></li>
+                                        <li class="dropdown"><a href="../tools/bk_values.html" class="dropdown-toggle">Tools</a></li>
+                                        <li class="dropdown"><a href="../settings/users.html" class="dropdown-toggle grey-active">Settings</a></li>            
+                                    </ul>
+                                    <div class="dropdown-menu">
+                                        <div class="d-flex">
+                                            <li><a href="../settings/users.html" class="sub-active">Users</a></li>
+                                            <li><a href="../settings/billings.html" class="">Billings</a></li>
+                                            <li><a href="../settings/training/director_training.html" class="">Training</a></li>
+                                            <li><a href="../settings/faq.html" class="">FAQ</a></li>
+                                            <li><a href="../settings/contracts.html" class="">Contracts</a></li>
+                                            <li><a href="../settings/legal_docs.html" class="">Legal Docs</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Section -->
+    <!-- Start User Management Section -->
+    <div class="dk-user-management-container">
+        <div class="dk-hr-tabs-container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="all-user-tab" data-toggle="tab" href="#all-user" role="tab" aria-controls="all-user" aria-selected="true">All -
+                    <span class="user_mange_all_user_count">5</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="super-admin-tab" data-toggle="tab" href="#super-admin" role="tab" aria-controls="super-admin" aria-selected="false">Super Admin - 
+                    <span class="user_mange_super_admin_count">3</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Admin-
+                    <span class="user_mange_user_count">2</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="false">Users-0</a>
+                </li>
+                <li class="nav-item ml-auto"">
+                  <a class="nav-link" id="add-user-tab" data-toggle="tab" href="#add-user" role="tab" aria-controls="add-user" aria-selected="false">Add New</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="edit-users-tab" data-toggle="tab" href="#edit-users" role="tab" aria-controls="edit-users" aria-selected="false">Edit Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="delete-user-tab" data-toggle="tab" href="#delete-user" role="tab" aria-controls="delete-user" aria-selected="false">Delete User</a>
+                  </li>
+            </ul>
+        </div>      
+        <div class="user_mgt tab-content tab-content">
+            <div class="tab-pane fade show active" id="all-user" role="tabpanel" aria-labelledby="all-user-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 50%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="https://admin.dkglobaljobs.com/uploads/profile_picture/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                        <tr id="user-id-2">
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr>
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="https://admin.dkglobaljobs.com/uploads/profile_picture/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                        <tr id="user-id-2">
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechiforuser2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr>  
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechiforuser2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                    </tbody>                                
+                </table>
+            </div>
+            <div class="tab-pane fade" id="super-admin" role="tabpanel" aria-labelledby="super-admin-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 50%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="https://admin.dkglobaljobs.com/uploads/profile_picture/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                        <tr id="user-id-2">
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr>
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="https://admin.dkglobaljobs.com/uploads/profile_picture/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                    </tbody>                                
+                </table>
+            </div>
+            <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 50%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="user-id-1">
+                            <td>
+                                <a href="#"><img src="https://admin.dkglobaljobs.com/uploads/profile_picture/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr> 
+                        <tr id="user-id-2">
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Admin</font></font></strong>
+                            </td>
+                            <td id="user_status-id-1">
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                        </tr>
+                    </tbody>                                
+                </table>
+            </div>
+            <div class="tab-pane fade" id="users" role="tabpanel" aria-labelledby="users-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 50%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="add-user" role="tabpanel" aria-labelledby="add-user-tab">
+                <div class="dk-add-user-tab-container">
+                    <div class="dk-add-user-heading">
+                        <h2>Add New User</h2>
+                    </div>
+                    <div class="dk-add-user-form-container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group dk-add-user-form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control user_first_name">
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group dk-add-user-form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="form-control user_last_name">      
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <div class="form-group dk-add-user-form-group">
+                                <label>Email Id</label>
+                                <input type="text" class="form-control user_email">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group dk-add-user-form-group">
+                                <label>User Type</label>
+                                <select class="form-control user_type" name="" id="">
+                                    <option value="-1">Select Type</option>
+                                    <option value="2">Admin</option>
+                                    <option value="3">User</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-sm-6 dk-add-user-form-group">
+                                <label>Status</label>
+                                <select class="form-control user_status" name="" id="">
+                                    <option value="-1">Select Status</option>
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dk-add-user-btn-container">
+                            <button type="button" class="btn bg-dark btn_insert_update_user">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="edit-users" role="tabpanel" aria-labelledby="edit-users-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 45%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edit Profile</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit legitRipple">Edit</button>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit legitRipple">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechifor2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit legitRipple">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit legitRipple">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor User</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechiforuser2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <div class="dk-user-role-type">
+                                    <select class="form-control user_status" name="" id="">
+                                        <option value="1">Admin</option>
+                                        <option value="0">User</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit legitRipple">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>                                
+                </table>
+            </div>
+            <div class="tab-pane fade" id="delete-user" role="tabpanel" aria-labelledby="delete-user-tab">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Users</font></font></th>
+                            <th style="width: 45%; text-align:left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name &amp; Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System ID</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">System Email</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Role</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status</font></font></th>
+                            <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Delete Profile</font></font></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/mukul.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mukul Jauhari</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mukuljauhari@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger legitRipple">Delete</button>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger legitRipple">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechifor2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Super Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger legitRipple">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/dpk-img.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deepak Kumar</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deepak.kr127@yahoo.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Admin</font></font></strong>
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger legitRipple">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#"><img src="../assets/images/default.png" height="40" width="40" alt="dp" style="border-radius: 100%;"></a>
+                            </td>
+                            <td>
+                                <div class="dk-user-mgt-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luiza Nechifor User</font></font></div>
+                                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luizanechiforuser2@gmail.com</font></font></small>
+                            </td>
+                            <td>
+                                        
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User</font></font></strong>  
+                            </td>
+                            <td>
+                                <a class="font-weight-bold cursor_pointer btn-active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Active</font></font></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger legitRipple">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>                                
+                </table>
+            </div>
+        </div>  
+    </div>
+    <!-- End User Management Section -->
+    <!-- Start Popup Section for Add user tab -->
+    <div class="modal fade dk-add-user-mange-popup" id="dk-add-user-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group dk-add-user-form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control user_first_name">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group dk-add-user-form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control user_last_name">      
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group dk-add-user-form-group">
+                        <label>Email Id</label>
+                        <input type="text" class="form-control user_email">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group dk-add-user-form-group">
+                        <label>User Type</label>
+                        <select class="form-control user_type" name="" id="">
+                            <option value="-1">Select Type</option>
+                            <option value="2">Admin</option>
+                            <option value="3">User</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 dk-add-user-form-group">
+                        <label>Status</label>
+                        <select class="form-control user_status" name="" id="">
+                            <option value="-1">Select Status</option>
+                            <option value="1">Active</option>
+                            <option value="0">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn bg-dark btn_insert_update_user">Add</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Popup Section for Add user tab -->
+    <style>
+    </style>
+  </body>
+</html>

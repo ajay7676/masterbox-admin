@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="../assets/css/hr_menu.css">
+    <!-- Font  Faimly -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- FONTAWESOME ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Master box Admin</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light dk-navbar-main">
+        <div class="container-fluid">
+            <div class="dk-navbar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="dk-logo">
+                        <a href="#" class="navbar-brand router-link-exact-active active">
+                            <img src="../assets/images/dk-logo.png" alt="DkJobs-Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="dk-nav-title">
+                        <span>Admin Panel - DK Masterbox</span>
+                    </div>
+                    <div class="dk-nav-profile">
+                        <div class="dropdown">
+                            <div class="dropdown-img" title="Deepak Kumar">
+                                <img src="../assets/images/dpk-img.png" class="img-fluid img-circle" alt="">
+                            </div>
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Sign Out</a>
+                                <form id="logout-form" action="#" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="g8vVsf3OwJAo2qXBEKc1yxEvpsqfEGPSDz6cxG2V">                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="dk-wrapper">
+        <div class="d-flex-cols">
+            <div class="dk-push-wrapper">
+                <div class="content">
+                    <div class="dk-hrMian">
+                        <div class="dk-ds-navbar">        
+                            <div class="dk-ds-menu col-md-12">
+                                <div class="dk-ds-menu-cols">
+                                    <ul class="d-flex align-items-end dk-submenu-dropdown-toggle">
+                                        <li><a href="../dashboard.html" class="">Dasboard</a></li>
+                                        <li class="dropdown"><a href="../specs/job_specs.html" class="dropdown-toggle">Specs</a></li>
+                                        <li class="dropdown"><a href="../resources/list.html" class="dropdown-toggle">Resources</a></li>
+                                        <li><a href="../accounts/summary.html" class="dropdown-toggle">Accounts</a></li>
+                                        <li class="dropdown"><a href="../clients.html" class="dropdown-toggle">Clients</a></li>
+                                        <li class="dropdown"><a href="../services.html" class="dropdown-toggle">Services</a></li>
+                                        <li class="dropdown"><a href="../payments/clients.html" class="dropdown-toggle">Payments</a></li>
+                                        <li class="dropdown"><a href="../database/summary.html" class="dropdown-toggle">Database</a></li>
+                                        <li class="dropdown"><a href="../reports.html" class="dropdown-toggle">Reports</a></li>
+                                        <li class="dropdown"><a href="../tools/tools.html" class="dropdown-toggle grey-active">Tools</a></li>
+                                        <li class="dropdown"><a href="../settings/users.html" class="dropdown-toggle ">Settings</a></li>            
+                                    </ul>
+                                    <div class="dropdown-menu">
+                                        <div class="d-flex">
+                                            <li><a href="bk_values.html" class="sub-active">BK Values</a></li>
+                                            <li><a href="logins.html" class="">Logins</a></li>
+                                            <li><a href="emails.html" class="">Emails</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Value Section -->
+    <div class="container-fluid" style="margin-top: 5rem;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dk-push-wrapper">
+                    <div class="dk-content">
+                        <div class="dk-backend-value-container d-flex">
+                            <!-- Start Main-category -->
+                            <div class="boxResponsbility mb-3" style="width: 19%;">
+                                <div class="align-self-center boxHeading">
+                                    <div class="row" style="padding-left:30px; padding-right:30px;">
+                                        <div class="mr-3 ml-2 pt-2">
+                                            <a title="Edit" href="#" class="list-icons-item" data-toggle="modal" data-target="#dk-edit-main-category"><i class="fa fa-edit color-black"></i></a>
+                                        </div>
+                                        <div class="media-body text-center color-black pt-1">Main Category</div>
+                                        <div class="ml-3 mr-1 align-self-center">
+                                            <a title="Add New Row" href="#" class="list-icons-item pull-right" data-toggle="modal" data-target="#dk-add-backend-value-main-category" style="padding-top: 5px;"><i class="fa fa-plus color-black"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">                    
+                                    <ul class="media-list media-list-container ui-sortable" id="box1">
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="1">Industry</div>
+                                        </li>
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="2">Country</div>
+                                        </li>
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="4">Language</div>
+                                        </li>
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="5">Live Jobs On Site</div>
+                                        </li>
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="7">Blogs &amp; Articles</div>
+                                        </li>
+                                        <li class="media">  
+                                          <div class="media-body clickBody" id="8">Bloggers Account</div>
+                                        </li>
+                                        <li class="media">  
+                                            <div class="media-body clickBody" id="9">Jobseeker Account</div>
+                                        </li>
+                                        <li class="media">  
+                                            <div class="media-body clickBody" id="10">Employer Account</div>
+                                        </li>
+                                        <li class="media">  
+                                            <div class="media-body clickBody" id="11">Master Admin</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Main Category --> 
+                            <!-- Start 1 sub category -->
+                            <div class="boxResponsbility mb-3" style="width: 19%;">
+                                <div class="align-self-center boxHeading">
+                                    <div class="row" style="padding-left:30px; padding-right:30px;">
+                                        <div class="mr-3 ml-2 pt-2">
+                                            <a title="Edit" href="#" class="list-icons-item" data-toggle="modal" data-target="#dk-edit-first-sub-category"><i class="fa fa-edit color-black"></i></a>
+                                        </div>
+                                        <div class="media-body text-center color-black pt-1">1st Sub Category</div>
+                                        <div class="ml-3 mr-1 align-self-center">
+                                            <a title="Add New Row" href="#" class="list-icons-item pull-right" data-toggle="modal" data-target="#dk-add-backend-value-first-category" style="padding-top: 5px;"><i class="fa fa-plus color-black"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <!-- End 1 sub category -->
+                            <!-- Start 2 sub category --> 
+                            <div class="boxResponsbility mb-3" style="width: 19%;">
+                                <div class="align-self-center boxHeading">
+                                    <div class="row" style="padding-left:30px; padding-right:30px;">
+                                        <div class="mr-3 ml-2 pt-2">
+                                            <a title="Edit" href="#" class="list-icons-item" data-toggle="modal" data-target="#dk-edit-second-sub-category"><i class="fa fa-edit color-black"></i></a>
+                                        </div>
+                                        <div class="media-body text-center color-black pt-1">2nd Sub Category</div>
+                                        <div class="ml-3 mr-1 align-self-center">
+                                            <a title="Add New Row" href="#" class="list-icons-item pull-right" data-toggle="modal" data-target="#dk-add-backend-value-second-category" style="padding-top: 5px;"><i class="fa fa-plus color-black"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <!-- End 2 sub category -->
+                            <!-- Start 4 sub category --> 
+                            <div class="boxResponsbility mb-3" style="width: 19%;">
+                                <div class="align-self-center boxHeading">
+                                    <div class="row" style="padding-left:30px; padding-right:30px;">
+                                        <div class="mr-3 ml-2 pt-2">
+                                            <a title="Edit" href="#" class="list-icons-item" data-toggle="modal" data-target="#dk-edit-fourth-sub-category"><i class="fa fa-edit color-black"></i></a>
+                                        </div>
+                                        <div class="media-body text-center color-black pt-1">4th Sub Category</div>
+                                        <div class="ml-3 mr-1 align-self-center">
+                                            <a title="Add New Row" href="#" class="list-icons-item pull-right" data-toggle="modal" data-target="#dk-add-backend-value-fourth-category" style="padding-top: 5px;"><i class="fa fa-plus color-black"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <!-- End 4 sub category -->
+                            <!-- Value Box Start -->
+                            <div class="col-md-3 boxResponsbility" style="min-width:14%;">
+                                <div class="align-self-center valueHeading" style="margin-left: 0% !important;">
+                                    <div class="row" style="padding-left:30px; padding-right:30px;">
+                                        <div class="media-body text-center">Value</div>
+                                        <div class="ml-3 mr-1 align-self-center">
+                                            <a title="Add New Row" href="#" class="list-icons-item pull-right" style="padding-top: 5px;"><i class="fa fa-plus color-black"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="headingId" value="1"> 
+                                <div class="card-body p-2 bg-white value_box"></div>
+                                <!-- Value Box End-->
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Value Section -->
+    <!-- Start Popup for 2nd Edit Sub Category -->
+    <div class="modal fade" id="dk-edit-fourth-sub-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h6 class="modal-title">Main Category</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="dk-backend-edit-btn nav-item nav-link active" id="nav-edit-fourth-tab" data-toggle="tab" href="#nav-edit-fourth" role="tab" aria-controls="nav-edit-fourth" aria-selected="true">Edit</a>
+                        <a class="dk-backend-recorder-btn nav-item nav-link" id="nav-recorder-fourth-tab" data-toggle="tab" href="#nav-recorder-fourth" role="tab" aria-controls="nav-recorder-fourth" aria-selected="false">Recorder</a>
+                        <a class="dk-backend-delete-btn nav-item nav-link" id="nav-delete-tab" data-toggle="tab" href="#nav-delete" role="tab" aria-controls="nav-delete" aria-selected="false">Delete</a>
+                    </div>
+                </nav>
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-edit-fourth" role="tabpanel" aria-labelledby="nav-edit-fourth-tab">
+                        
+                    </div>
+                    <div class="tab-pane fade" id="nav-recorder-fourth" role="tabpanel" aria-labelledby="nav-recorder-fourth-tab">
+                        <!-- <div class="table-responsive">
+                            <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody id="sortable" class="ui-sortable">
+                                    <tr class="ui-state-default ui-sortable-handle" id="6">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Status</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="8">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Progress</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="9">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Status</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="10">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Blog Category</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="text-center">
+                                    <tr>
+                                        <td colspan="2" style="padding: 15px;"><a href="#" class="save_reorder" data-id="2">Save Order</a></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="nav-delete" role="tabpanel" aria-labelledby="nav-delete-tab">
+                        <div class="table-responsive">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Popup for 4th Edit Sub Category -->
+    <!-- Start Popup for 2nd Edit Sub Category -->
+    <div class="modal fade" id="dk-edit-second-sub-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h6 class="modal-title">Main Category</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="dk-backend-edit-btn nav-item nav-link active" id="nav-edit-second-tab" data-toggle="tab" href="#nav-edit-second" role="tab" aria-controls="nav-edit-second" aria-selected="true">Edit</a>
+                        <a class="dk-backend-recorder-btn nav-item nav-link" id="nav-recorder-second-tab" data-toggle="tab" href="#nav-recorder-second" role="tab" aria-controls="nav-recorder-second" aria-selected="false">Recorder</a>
+                        <a class="dk-backend-delete-btn nav-item nav-link" id="nav-delete-second-tab" data-toggle="tab" href="#nav-delete-second" role="tab" aria-controls="nav-delete-second" aria-selected="false">Delete</a>
+                    </div>
+                </nav>
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-edit-second" role="tabpanel" aria-labelledby="nav-edit-second-tab">
+                        <!-- <table id="edit_box_pop_table" class="table table-bordered">
+                            <tbody>
+                                    <tr>
+                                        <td style="width:40px">1</td>
+                                        <td><input type="text" class="form-control txtEditHeading15" data-id="15" value="Case Status"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#;"><i class="fa fa-save"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:40px">2</td>
+                                        <td><input type="text" class="form-control txtEditHeading18" data-id="18" value="Case Progress"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#;"><i class="fa fa-save"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:40px">3</td>
+                                        <td><input type="text" class="form-control txtEditHeading21" data-id="21" value="Case Status"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#;"><i class="fa fa-save"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:40px">4</td>
+                                        <td><input type="text" class="form-control txtEditHeading23" data-id="23" value="Blog Category"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                    </tr>
+                                </tbody>
+                        </table> -->
+                    </div>
+                    <div class="tab-pane fade" id="nav-recorder-second" role="tabpanel" aria-labelledby="nav-recorder-second-tab">
+                        <!-- <div class="table-responsive">
+                            <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody id="sortable" class="ui-sortable">
+                                    <tr class="ui-state-default ui-sortable-handle" id="6">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Status</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="8">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Progress</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="9">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Case Status</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="10">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Blog Category</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2" style="padding: 15px;"><a href="#" class="save_reorder" data-id="2">Save Order</a></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="nav-delete-second" role="tabpanel" aria-labelledby="nav-delete-second-tab">
+                        <!-- <div class="table-responsive">
+                            <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody id="sortable" class="ui-sortable">
+                                    <tr id="headingpop6">
+                                        <td style="text-align:left;padding:10px;">Case Status</td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(6,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                    </tr><tr id="headingpop8">
+                                        <td style="text-align:left;padding:10px;">Case Progress</td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(8,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                    </tr><tr id="headingpop9">
+                                        <td style="text-align:left;padding:10px;">Case Status</td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(9,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                    </tr><tr id="headingpop10">
+                                        <td style="text-align:left;padding:10px;">Blog Category</td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(10,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Popup for 2nd Edit Sub Category -->
+    <!-- Start Popup for 1st Sub Category -->
+    <div class="modal fade" id="dk-edit-first-sub-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h6 class="modal-title">Main Category</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="dk-backend-edit-btn nav-item nav-link active" id="nav-edit-first-tab" data-toggle="tab" href="#nav-edit-first" role="tab" aria-controls="nav-edit-first" aria-selected="true">Edit</a>
+                        <a class="dk-backend-recorder-btn nav-item nav-link" id="nav-recorder-first-tab" data-toggle="tab" href="#nav-recorder-first" role="tab" aria-controls="nav-recorder-first" aria-selected="false">Recorder</a>
+                        <a class="dk-backend-delete-btn nav-item nav-link" id="nav-delete-first-tab" data-toggle="tab" href="#nav-delete-first" role="tab" aria-controls="nav-delete-first" aria-selected="false">Delete</a>
+                    </div>
+                </nav>
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-edit-first" role="tabpanel" aria-labelledby="nav-edit-first-tab">
+                        <!-- <table id="edit_box_pop_table" class="table table-bordered">
+                            <tbody><tr>
+                                    <td style="width:40px">1</td>
+                                    <td><input type="text" class="form-control txtEditHeading6" data-id="6" value="Job Type"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">2</td>
+                                    <td><input type="text" class="form-control txtEditHeading8" data-id="8" value="Timeline"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">3</td>
+                                    <td><input type="text" class="form-control txtEditHeading9" data-id="9" value="Type"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">4</td>
+                                    <td><input type="text" class="form-control txtEditHeading10" data-id="10" value="Category"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">5</td>
+                                    <td><input type="text" class="form-control txtEditHeading19" data-id="19" value="Active Blogs" autocomplete="off"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">6</td>
+                                    <td><input type="text" class="form-control txtEditHeading14" data-id="14" value="Blogs Request"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr><tr>
+                                    <td style="width:40px">7</td>
+                                    <td><input type="text" class="form-control txtEditHeading20" data-id="20" value="Blogger Accounts"></td>
+                                    <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-save"></i></a></td>
+                                </tr></tbody>
+                        </table> -->
+                    </div>
+                    <div class="tab-pane fade" id="nav-recorder-first" role="tabpanel" aria-labelledby="nav-recorder-first-tab">
+                        <!-- <div class="table-responsive">
+                            <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody id="sortable" class="ui-sortable">
+                                    <tr class="ui-state-default ui-sortable-handle" id="6">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Job Type</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="8">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Timeline</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="9">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Type</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="10">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Category</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="19">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Active Blogs</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="14">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Blogs Request</td>
+                                    </tr>
+                                    <tr class="ui-state-default ui-sortable-handle" id="20">
+                                        <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                        <td style="text-align:left;padding:5px;padding-left:10px;">Blogger Accounts</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2" style="padding: 15px;"><a href="#" class="save_reorder" data-id="2">Save Order</a></td>
+                                    </tr>
+                                </tfoot>
+                            </table> -->
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-delete-first" role="tabpanel" aria-labelledby="nav-delete-first-tab">
+                        <!-- <div class="table-responsive">
+                            <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody id="sortable" class="ui-sortable">
+                                    <tr id="headingpop6">
+                                        <td style="text-align:left;padding:10px;">Job Type</td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(6,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop8">
+                                <td style="text-align:left;padding:10px;">Timeline</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(8,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop9">
+                                <td style="text-align:left;padding:10px;">Type</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(9,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop10">
+                                <td style="text-align:left;padding:10px;">Category</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(10,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop19">
+                                <td style="text-align:left;padding:10px;">Active Blogs</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(19,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop14">
+                                <td style="text-align:left;padding:10px;">Blogs Request</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(14,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr><tr id="headingpop20">
+                                <td style="text-align:left;padding:10px;">Blogger Accounts</td>
+                                <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" onclick="delete_value(20,'backend_value_headings')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            </tr></tbody><tfoot></tfoot></table>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End Popup for 1st Edit Sub Category -->
+    <!-- Start Popup Section for Edit Main Category -->
+    <div class="modal fade" id="dk-edit-main-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header dk-main-cate-header">
+                <h6 class="modal-title">Main Category</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="dk-backend-edit-btn nav-item nav-link active" id="nav-edit-main-tab" data-toggle="tab" href="#nav-edit-main" role="tab" aria-controls="nav-edit-main" aria-selected="true">Edit</a>
+                            <a class="dk-backend-recorder-btn nav-item nav-link" id="nav-recorder-main-tab" data-toggle="tab" href="#nav-recorder-main" role="tab" aria-controls="nav-recorder-main" aria-selected="false">Recorder</a>
+                            <a class="dk-backend-delete-btn nav-item nav-link" id="nav-delete-main-tab" data-toggle="tab" href="#nav-delete-main" role="tab" aria-controls="nav-delete-main" aria-selected="false">Delete</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-edit-main" role="tabpanel" aria-labelledby="nav-edit-main-tab">
+                            <!-- <table id="edit_box_pop_table" class="table table-bordered">
+                                <tbody><tr>
+                                        <td style="width:40px">1</td>
+                                        <td><input type="text" class="form-control txtEditHeading1" data-id="1" value="Industry"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(1)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">2</td>
+                                        <td><input type="text" class="form-control txtEditHeading2" data-id="2" value="Country"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(2)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">3</td>
+                                        <td><input type="text" class="form-control txtEditHeading4" data-id="4" value="Language"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(4)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">4</td>
+                                        <td><input type="text" class="form-control txtEditHeading5" data-id="5" value="Live Jobs On Site"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(5)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">5</td>
+                                        <td><input type="text" class="form-control txtEditHeading7" data-id="7" value="Blogs &amp; Articles"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(7)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">6</td>
+                                        <td><input type="text" class="form-control txtEditHeading11" data-id="11" value="Popular Job Industries"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(11)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">7</td>
+                                        <td><input type="text" class="form-control txtEditHeading12" data-id="12" value="Job Title"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(12)"><i class="fa fa-save"></i></a></td>
+                                    </tr><tr>
+                                        <td style="width:40px">8</td>
+                                        <td><input type="text" class="form-control txtEditHeading13" data-id="13" value="Bloggers"></td>
+                                        <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Update" href="#" onclick="updateHeading(13)"><i class="fa fa-save"></i></a></td>
+                                    </tr></tbody>
+                            </table>  -->
+                        </div>
+                        <div class="tab-pane fade" id="nav-recorder-main" role="tabpanel" aria-labelledby="nav-recorder-main-tab">
+                            <!-- <div class="table-responsive">
+                                <table id="edit_box_pop_table" class="table table-bordered">
+                                    <tbody id="sortable" class="ui-sortable">
+                                        <tr class="ui-state-default ui-sortable-handle" id="1">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Industry dfd</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="2">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Country</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="4">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Language</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="5">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Live Jobs On Site</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="7">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Blogs &amp; Articles</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="11">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Popular Job Industries</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="12">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Job Title</td>
+                                        </tr>
+                                        <tr class="ui-state-default ui-sortable-handle" id="13">
+                                            <td style="width:50px"><i class="fa fa-arrows-alt"></i></td>
+                                            <td style="text-align:left;padding:5px;padding-left:10px;">Bloggers</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2" style="padding: 15px;"><a href="javascript:void(0);" class="save_reorder" data-id="1">Save Order</a></td>
+                                        </tr>
+                                    </tfoot>
+                                </table> -->
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-delete-main" role="tabpanel" aria-labelledby="nav-delete-main-tab">
+                            <!-- <div class="table-responsive">
+                                <table id="edit_box_pop_table" class="table table-bordered">
+                                    <tbody id="sortable" class="ui-sortable">
+                                        <tr id="headingpop1">
+                                            <td style="text-align:left;padding:10px;">Industry</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop2">
+                                            <td style="text-align:left;padding:10px;">Country</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" ><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop4">
+                                            <td style="text-align:left;padding:10px;">Language</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" ><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop5">
+                                            <td style="text-align:left;padding:10px;">Live Jobs On Site</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop7">
+                                            <td style="text-align:left;padding:10px;">Blogs &amp; Articles</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop11">
+                                            <td style="text-align:left;padding:10px;">Popular Job Industries</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" ><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop12">
+                                            <td style="text-align:left;padding:10px;">Job Title</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;" ><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr id="headingpop13">
+                                            <td style="text-align:left;padding:10px;">Bloggers</td>
+                                            <td style="width:50px"><a data-toggle="tooltip" data-placement="top" title="Delete" href="#;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- End Popup Section for Edit Main Category  -->
+    <!-- Start Popup Section for Add Backend Value for 4th sub Category -->
+    <div class="modal fade" id="dk-add-backend-value-fourth-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h6 class="modal-title">4th Sub Category</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <table class="w-100 tblAddResponsility">
+                        <tbody>
+                            <tr id="tr1">                        
+                                <td>
+                                    <label class="label">Main Category Name</label>
+                                    <select class="form-control" id="selectMain">
+                                        <option value="-1">Select</option>
+                                        <option value="1">Industry</option>
+                                        <option value="2">Country</option>
+                                        <option value="4">Language</option>
+                                        <option value="5">Live Jobs On Site</option>
+                                        <option value="7">Blogs &amp; Articles</option>
+                                        <option value="8">Bloggers Account</option>
+                                        <option value="9">Jobseeker Account</option>
+                                        <option value="10">Employer Account</option>
+                                        <option value="11">Master Admin</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr id="tr2">                        
+                                <td>
+                                    <label class="label">1st Category Name</label>
+                                    <select class="form-control" id="selectMain">
+                                        <option value="-1">Select 1st Category First</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr id="tr3">                        
+                                <td>
+                                    <label class="label">2nd Category Name</label>
+                                    <select class="form-control" id="selectMain">
+                                        <option value="-1">Select 2nd Category First</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label class="label">Name</label>
+                                    <input type="text" class="form-control txtBoxHeading" placeholder="Enter name....">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn dk-add-val-close-btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn dk-add-val-create-btn">Create</button>
+                </div>
+            </div>    
+        </div>
+    </div> 
+    <!-- End Popup Section for Add Backend Value for 4th Sub Category -->
+    <!-- Start Popup Section for Add Backend Value for 2nd sub Category -->
+    <div class="modal fade" id="dk-add-backend-value-second-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h6 class="modal-title">2nd Sub Category</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <table class="w-100 tblAddResponsility">
+                        <tbody>
+                            <tr id="tr1">                        
+                                <td>
+                                    <label class="label">Main Category Name</label>
+                                    <select class="form-control" id="selectMain">
+                                        <option value="-1">Select</option>
+                                        <option value="1">Industry</option>
+                                        <option value="2">Country</option>
+                                        <option value="4">Language</option>
+                                        <option value="5">Live Jobs On Site</option>
+                                        <option value="7">Blogs &amp; Articles</option>
+                                        <option value="8">Bloggers Account</option>
+                                        <option value="9">Jobseeker Account</option>
+                                        <option value="10">Employer Account</option>
+                                        <option value="11">Master Admin</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr id="tr2">                        
+                                <td>
+                                    <label class="label">1st Category Name</label>
+                                    <select class="form-control" id="selectMain">
+                                        <option value="-1">Select 1st Category First</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label class="label">Name</label>
+                                    <input type="text" class="form-control txtBoxHeading" placeholder="Enter name....">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn dk-add-val-close-btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn dk-add-val-create-btn">Create</button>
+                </div>
+            </div>    
+        </div>
+    </div> 
+    <!-- End Popup Section for Add Backend Value for 2nd Sub Category -->
+     <!-- Start Popup Section for Add Backend Value for 1st sub Category -->
+    <div class="modal fade" id="dk-add-backend-value-first-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h6 class="modal-title">1st Sub Category</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <table class="w-100 tblAddResponsility">
+                        <tbody><tr id="tr1">                        
+                            <td>
+                                <label class="label">Main Category Name</label>
+                                <select class="form-control" id="selectMain" onchange="selectMainDdl()">
+                                    <option value="-1">Select</option>
+                                    <option value="1">Industry</option>
+                                    <option value="2">Country</option>
+                                    <option value="4">Language</option>
+                                    <option value="5">Live Jobs On Site</option>
+                                    <option value="7">Blogs &amp; Articles</option>
+                                    <option value="8">Bloggers Account</option>
+                                    <option value="9">Jobseeker Account</option>
+                                    <option value="10">Employer Account</option>
+                                    <option value="11">Master Admin</option>
+                                    
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label class="label">Name</label>
+                                <input type="text" class="form-control txtBoxHeading" placeholder="Enter name....">
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn dk-add-val-close-btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn dk-add-val-create-btn">Create</button>
+                </div>
+            </div>    
+        </div>
+    </div> 
+    <!-- End Popup Section for Add Backend Value for 1st SubCategory -->
+    <!-- Start Popup Section for Add Backend Value for Main Category -->
+    <div class="modal fade" id="dk-add-backend-value-main-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h6 class="modal-title">Main Category</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <label class="label">Name</label>
+                            <input type="text" class="form-control txtBoxHeading" placeholder="Enter name....">
+                        </td>
+                    </tr>
+                </tbody>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn dk-add-val-close-btn" data-dismiss="modal">Close</button>
+            <button type="button" class="btn dk-add-val-create-btn">Create</button>
+            </div>
+        </div>
+    </div> 
+    <!-- End Popup Section for Add Backend Value for Main Category -->
+    <!-- Start Popup Section for Edit 1st Sub Category -->
+    <!-- End Popup Section for Edit 1st Sub Category  -->
+    <style>
+        /* .dk-backend-value-container{
+            background-color: #363F4C;
+            padding: 1.4rem 0.5rem 0.5rem 0.6rem;
+        } */
+        .boxHeading {
+            background: #d9d9d9;
+            font-size: 14px;
+            border: 1px solid #c0c0c0;
+        }
+        .color-black{
+            color: #333333 !important;
+            font-size: 14px;
+        }
+        .media-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        /* .media {
+            margin: 0;
+            border: 1px solid #ddd;
+            border-top: none;
+            color: #fff;
+            padding-left: 0.7rem;
+            background-color: #27597e;
+        }
+        .media.card-body, .media:first-child {
+            margin-top: 0;
+        } */
+        .media {
+            margin: 0;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+        .media.card-body, .media:first-child {
+            margin-top: 0;
+        }
+        li.media .media-body {
+            color: #fff;
+            background: #27597e;
+        }
+        .media-body {
+            color: #fff;
+            font-size: 14px !important;
+            padding: 7px 10px;
+        }
+        .valueHeading {
+            background: #03a786;
+            font-size: 13px !important;
+            border: 0px solid #03a786 !important;
+            color: #fff !important;
+        }
+        .modal-content {
+            border-radius: 0;
+        }
+        .modal-header{
+            padding: 0.5rem;
+            background-color: #37404d;
+            color: #fff;
+            border-radius: 0;
+        }
+        .modal-title {
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 1.3em;
+            width: 100%;
+            text-align: center;
+            /* font-weight: bold; */
+        }
+        .dk-backend-edit-btn, .dk-backend-edit-btn:hover{
+            background-color: #FFB64D;
+            color: #fff;
+            border-radius: 0;
+            font-size: 14px;
+            min-width: 80px;
+        }
+        .dk-backend-recorder-btn, .dk-backend-recorder-btn:hover{
+            background-color: #363f4c;
+            color: #fff;
+            border-radius: 0;
+            font-size: 14px;
+            min-width: 80px;
+        }
+        .dk-backend-delete-btn, .dk-backend-delete-btn:hover{
+            background-color: #dc3545;
+            color: #fff;
+            border-radius: 0;
+            font-size: 14px;
+            min-width: 80px;
+        }
+        .nav-tabs .nav-link.dk-backend-edit-btn,
+        .nav-tabs .nav-link.dk-backend-recorder-btn,
+        .nav-tabs .nav-link.dk-backend-delete-btn{
+            border-radius: 0;
+        } 
+        #dk-edit-main-category tr td:nth-child(1),
+        #dk-edit-first-sub-category tr td:nth-child(1),
+        #dk-edit-second-sub-category tr td:nth-child(1) {
+            padding: 5px;
+            text-align: center;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+        #dk-edit-main-category #edit_box_pop_table tr td:nth-child(2), 
+        #dk-edit-first-sub-category #edit_box_pop_table tr td:nth-child(2),
+        #dk-edit-second-sub-category #edit_box_pop_table tr td:nth-child(2) {
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 13px;
+        }
+        #dk-edit-main-category tr td:nth-child(3), 
+        #dk-edit-first-sub-category tr td:nth-child(3),
+        #dk-edit-second-sub-category tr td:nth-child(3){
+            padding: 5px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #dk-edit-main-category tr td i.fa-save,
+        #dk-edit-first-sub-category tr td i.fa-save,
+        #dk-edit-second-sub-category tr td i.fa-save{
+            padding: 7px;
+            text-align: center;
+            color: #fff;
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        #dk-edit-main-category tr td i.fa-arrows-alt, 
+        #dk-edit-first-sub-category tr td i.fa-arrows-alt,
+        #dk-edit-second-sub-category tr td i.fa-arrows-alt{
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+            padding: .5rem .5rem;
+        }
+        .form-control{
+            background-color: #f5f2f2;
+            border-radius: 0;
+        }
+        .form-control:focus {
+            box-shadow: none !important;
+            outline: 0 !important;
+        }
+        .save_reorder, .save_reorder:hover{
+            background-color: #363f4c;
+            color: #fff;
+            padding: 10px;
+        }
+        #dk-edit-main-category tr td i.fa-trash,
+        #dk-edit-first-sub-category tr td i.fa-trash,
+        #dk-edit-second-sub-category tr td i.fa-trash {
+            padding: 7px;
+            text-align: center;
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .dk-add-val-close-btn,
+        .dk-add-val-close-btn:hover{
+            color: #fff;
+            background-color: #dc3545 !important;
+            border-radius: 0;
+        }
+        .dk-add-val-create-btn,
+        .dk-add-val-close-btn:hover {
+            color: #fff;
+            background-color: #343a40 !important;
+            border-radius: 0;
+        }
+
+    </style>
+</body>
+</html>  
